@@ -1,0 +1,11 @@
+.post-detail{
+    background: var(--basic-white, #FFF);
+    display: flex;
+    width: 846px;
+    padding: var(--spacing-10, 40px);
+    border-radius: 20px;
+    border: 2px solid var(--primary-400, #C4DBF3);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-8, 32px);
+}

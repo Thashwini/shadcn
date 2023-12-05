@@ -1,5 +1,4 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-import Image from 'next/image'
+import Post from '@/components/screens/Post/Post'
 
 interface Recipe {
   title: string,
@@ -10,36 +9,10 @@ interface Recipe {
   id: string
 }
 
-async function getRecipes(): Promise<Recipe[]> {
-  const result = await fetch('http://localhost:4000/recipes')
-
-  return result.json()
-}
-
 export default async function Home() {
-
-  const recipes = await getRecipes()
   return (
     <main>
-     <div className='grid grid-cols-3 gap-8'>
-      {recipes.map(recipe => (
-        <Card key={recipe.id}>
-          <CardHeader>
-            <div>
-              <CardTitle>{recipe.title}</CardTitle>
-              <CardDescription>{recipe.time} mins to cook</CardDescription>
-            </div>
-          </CardHeader>
-          <CardContent>
-            <p>{recipe.description}</p>
-          </CardContent>
-          <CardFooter>
-            <button>View Recipe</button>
-            {recipe.vegan && <p>Vegan</p>}
-          </CardFooter>
-        </Card>
-      ))}
-     </div>
+     <Post />
     </main>
   )
 }

@@ -4,34 +4,28 @@
  
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
- 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
- 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
- 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
- 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
- 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
- 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
- 
+    /* Mode 1 */
+    /* colors */
+    --accent: #b5f5ec;
+    --accent-foreground: #13c2c2;
+    --background: #f8fafc;
+    --border: #c4dbf3;
+    --card: #ffffff;
+    --card-foreground: #ffffff;
+    --destructive: #fecaca;
+    --destructive-foreground: #dc2626;
+    --foreground: #374151;
+    --input: #ffffff;
+    --muted: #e5e7eb;
+    --muted-foreground: #1f2937;
+    --popover: #ffffff;
+    --popover-foreground: #ffffff;
+    --primary: #1a508b;
+    --primary-foreground: #f8fafc;
+    --ring: #ffffff;
+    --secondary: #ffc285;
+    --secondary-foreground: #0d335d;
+    /* numbers */
     --radius: 0.5rem;
   }
  
@@ -63,30 +57,16 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+  }}
+
+  .post-detail{
+    background: var(--basic-white, #FFF);
+    display: flex;
+    width: 846px;
+    padding: var(--spacing-10, 40px);
+    border-radius: 20px;
+    border: 2px solid var(--primary-400, #C4DBF3);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-8, 32px);
   }
-}
- 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
-main, nav {
-  @apply max-w-6xl mx-auto my-12;
-}
-
-p {
-  @apply mt-2;
-}
-
-h1 {
-  @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
-}
-
-h2 {
-  @apply scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0;
-}
