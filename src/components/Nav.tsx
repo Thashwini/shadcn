@@ -1,5 +1,6 @@
 import React from 'react'
-import Logo from '../../public/images/Logo.svg'
+import Logo from '../../public/images/group-462.svg'
+import { ModeToggle } from './ui/toggle-mode'
 
 const Nav = () => {
   return (
@@ -8,6 +9,7 @@ const Nav = () => {
         <ul className='flex items-center justify-between w-full'>
             <li><Logo /></li>
             <li>About Vouch</li>
+            <ModeToggle />
         </ul>
     </nav>
 </header>
